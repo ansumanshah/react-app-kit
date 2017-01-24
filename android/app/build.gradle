@@ -65,6 +65,11 @@ import com.android.build.OutputFile
  * ]
  */
 
+project.ext.react = [
+    // Custom entryFile for bundle
+    entryFile: "src/index.android.js",
+]
+
 apply from: "../../node_modules/react-native/react.gradle"
 
 /**
