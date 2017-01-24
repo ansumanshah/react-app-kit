@@ -1,0 +1,3 @@
+rootProject.name = 'ReactAppKit'
+
+include ':app'
