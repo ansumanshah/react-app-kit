@@ -3,8 +3,8 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
-		"start:mobile": "node node_modules/react-native/local-cli/cli.js start",
-		"start:native": "electron .",
+		"start:native": "node node_modules/react-native/local-cli/cli.js start",
+		"start:electron": "electron .",
 		"start:web": "react-scripts start",
 		"build:web": "react-scripts build",
 		"test:native": "jest",
