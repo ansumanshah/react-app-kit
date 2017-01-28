@@ -1,7 +1,11 @@
 import { applyMiddleware, createStore, compose } from 'redux';
 import createLogger from 'redux-logger';
-import combineReducers from './reducers';
+import createSagaMiddleware from 'redux-saga';
 
+import combineReducers from './reducers';
+import combineSagas from '../sagas';
+
+const sagaMiddleware = createSagaMiddleware();
 const logger = createLogger({
   collapsed: true,
   duration: true,
@@ -11,6 +15,7 @@ export default function configureStore() {
   const middleware = [];
   const enhancers = [];
   /* ----- Custom Middlewares ----- */
+  middleware.push(sagaMiddleware);
   middleware.push(logger);
   /* ----- Custom Enhancers ----- */
   enhancers.push(applyMiddleware(...middleware));
@@ -20,5 +25,8 @@ export default function configureStore() {
     combineReducers(),
     composeEnhancers(...enhancers),
   );
+
+  sagaMiddleware.run(combineSagas);
+
   return store;
 }
