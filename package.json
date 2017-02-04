@@ -1,41 +1,44 @@
 {
-	"name": "ReactAppKit",
-	"version": "0.1.0",
-	"private": true,
-	"scripts": {
-		"start:mobile": "node node_modules/react-native/local-cli/cli.js start",
-		"start:desktop": "electron .",
-		"start:web": "react-scripts start",
-		"build:web": "react-scripts build",
-		"test:native": "jest",
-		"test:web": "react-scripts test --env=jsdom",
-		"eject": "react-scripts eject"
-	},
-	"main": "src/index.desktop.js",
-	"dependencies": {
-		"react": "~15.4.2",
-		"react-dom": "~15.4.2",
-		"react-native": "0.41.1",
-		"react-native-web": "^0.0.68",
-		"react-redux": "^5.0.2",
-		"redux": "^3.6.0",
-		"redux-logger": "^2.7.4",
-		"redux-saga": "^0.14.3",
-		"reselect": "^2.5.4",
-		"styled-components": "next"
-	},
-	"devDependencies": {
-		"babel-jest": "18.0.0",
-		"babel-preset-react-native": "1.9.1",
-		"electron": "^1.4.15",
-		"jest": "18.1.0",
-		"react-scripts": "0.8.5",
-		"react-test-renderer": "~15.4.2"
-	},
-	"jest": {
-		"preset": "react-native"
-	},
-	"eslintConfig": {
-		"extends": "react-app"
-	}
+  "name": "ReactAppKit",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start:mobile": "node node_modules/react-native/local-cli/cli.js start",
+    "start:desktop": "electron .",
+    "start:web": "react-scripts start",
+    "build:web": "react-scripts build",
+    "test:native": "jest",
+    "test:web": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
+  },
+  "main": "src/index.desktop.js",
+  "dependencies": {
+    "react": "~15.4.2",
+    "react-dom": "~15.4.2",
+    "react-native": "0.41.1",
+    "react-native-web": "^0.0.68",
+    "react-redux": "^5.0.2",
+    "redux": "^3.6.0",
+    "redux-logger": "^2.7.4",
+    "redux-saga": "^0.14.3",
+    "reselect": "^2.5.4",
+    "styled-components": "next"
+  },
+  "devDependencies": {
+    "babel-jest": "18.0.0",
+    "babel-preset-react-native": "1.9.1",
+    "electron": "^1.4.15",
+    "jest": "18.1.0",
+    "react-scripts": "0.8.5",
+    "react-test-renderer": "~15.4.2",
+    "@kadira/storybook": "^2.21.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  }
 }
